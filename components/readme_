@@ -1,0 +1,2 @@
+ng g c server --spec false
+ng g c servers --spec false
