@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -8,6 +8,9 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class ImportjobComponent {
   importJob: FormGroup;
+  @Input() typeImport: string;
+  @Input() typeUpdate: string;
+  @Input() typeRun: string;
 
   constructor(private fb: FormBuilder) {
     this.importJob = fb.group({

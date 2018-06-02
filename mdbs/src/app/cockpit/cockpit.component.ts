@@ -31,6 +31,10 @@ export class CockpitComponent implements AfterViewInit {
   first = 1;
   last = 4;
 
+  typeImport = 'import';
+  typeUpdate = 'update';
+  typeRun = 'run';
+
   @HostListener('click', ['$event']) onclick(event: any) {
     if (event.target.parentElement.innerText >= 1 || event.target.parentElement.innerText <= 3) {
       (this.activePage as number) = +event.target.parentElement.innerText;
