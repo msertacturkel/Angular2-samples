@@ -6,12 +6,14 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {AppComponent} from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule, routingComponents} from './app-routing.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    routingComponents
+    routingComponents,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
