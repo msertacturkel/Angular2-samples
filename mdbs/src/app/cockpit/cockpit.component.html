@@ -1,153 +1,162 @@
-<!--Panel-->
-<div class="card card-body">
-  <h4 class="card-title">Control Panel</h4>
-  <p class="card-text"></p>
-  <div class="flex-row">
-    <button type="button" class="btn btn-primary waves-light" (click)="styleAdd.show()" mdbWavesEffect>
-      <i class="fa fa-plus-circle" aria-hidden="true"></i>
-      New ImportJob
-    </button>
-    <button type="button" class="btn btn-warning waves-light" (click)="styleUpdate.show()" mdbWavesEffect>
-      <i class="fa fa-refresh" aria-hidden="true"></i>
-      Update ImportJob
-    </button>
-    <button type="button" class="btn btn-success waves-light" (click)="runJob.show()" mdbWavesEffect>
-      <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-      Run ImportJob
-    </button>
-  </div>
-</div>
-<!--/.Panel-->
-<!-- Add Job-->
-<div mdbModal #styleAdd="mdb-modal" class="modal fade" id="addJob" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-info" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <p class="heading lead">New ImportJob</p>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="styleAdd.hide()">
-          <span aria-hidden="true" class="white-text">×</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="text-center">
-          <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad
-            consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione
-            fuga, enim, ab officiis totam.</p>
-        </div>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-outline-secondary" data-dismiss="modal" (click)="styleAdd.hide()"
-           mdbWavesEffect>No, thanks</a>
-      </div>
-    </div>
-  </div>
-</div>
-<!--Add Job -->
-<!--Update Job -->
-<div mdbModal #styleUpdate="mdb-modal" class="modal fade" id="updateJob" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-warning" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <p class="heading lead">Update ImportJob</p>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="styleUpdate.hide()">
-          <span aria-hidden="true" class="white-text">×</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="text-center">
-          <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad
-            consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione
-            fuga, enim, ab officiis totam.</p>
-        </div>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-outline-secondary" data-dismiss="modal" (click)="styleUpdate.hide()"
-           mdbWavesEffect>No, thanks</a>
-      </div>
-    </div>
-  </div>
-</div>
-<!--Update Job -->
-<!--Run Job -->
-<div mdbModal #runJob="mdb-modal" class="modal fade" id="runJob" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-success" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <p class="heading lead">Run ImportJob</p>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="runJob.hide()">
-          <span aria-hidden="true" class="white-text">×</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="text-center">
-          <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad
-            consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione
-            fuga, enim, ab officiis totam.</p>
-        </div>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-outline-secondary" data-dismiss="modal" (click)="runJob.hide()" mdbWavesEffect>No,
-          thanks</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Run Job -->
-
 <br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!--Panel-->
+      <div class="card card-body">
+        <h4 class="card-title">Control Panel</h4>
+        <p class="card-text"></p>
+        <div class="flex-row">
+          <button type="button" class="btn btn-primary waves-light" (click)="styleAdd.show()" mdbWavesEffect>
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            New ImportJob
+          </button>
+          <button type="button" class="btn btn-warning waves-light" (click)="styleUpdate.show()" mdbWavesEffect>
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+            Update ImportJob
+          </button>
+          <button type="button" class="btn btn-success waves-light" (click)="runJob.show()" mdbWavesEffect>
+            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+            Run ImportJob
+          </button>
+        </div>
+      </div>
+      <!--/.Panel-->
+      <!-- Add Job-->
+      <div mdbModal #styleAdd="mdb-modal" class="modal fade" id="addJob" tabindex="-1" role="dialog"
+           aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="heading lead">New ImportJob</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="styleAdd.hide()">
+                <span aria-hidden="true" class="white-text">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="text-center">
+                <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad
+                  consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione
+                  fuga, enim, ab officiis totam.</p>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <a type="button" class="btn btn-outline-secondary" data-dismiss="modal" (click)="styleAdd.hide()"
+                 mdbWavesEffect>No, thanks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Add Job -->
+      <!--Update Job -->
+      <div mdbModal #styleUpdate="mdb-modal" class="modal fade" id="updateJob" tabindex="-1" role="dialog"
+           aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-warning" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="heading lead">Update ImportJob</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="styleUpdate.hide()">
+                <span aria-hidden="true" class="white-text">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="text-center">
+                <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad
+                  consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione
+                  fuga, enim, ab officiis totam.</p>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <a type="button" class="btn btn-outline-secondary" data-dismiss="modal" (click)="styleUpdate.hide()"
+                 mdbWavesEffect>No, thanks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Update Job -->
+      <!--Run Job -->
+      <div mdbModal #runJob="mdb-modal" class="modal fade" id="runJob" tabindex="-1" role="dialog"
+           aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-success" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="heading lead">Run ImportJob</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="runJob.hide()">
+                <span aria-hidden="true" class="white-text">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="text-center">
+                <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad
+                  consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione
+                  fuga, enim, ab officiis totam.</p>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <a type="button" class="btn btn-outline-secondary" data-dismiss="modal" (click)="runJob.hide()"
+                 mdbWavesEffect>No,
+                thanks</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<main class="container-fluid">
-  <div class="row my-5">
-    <!--Table -->
-    <table class="table">
+      <!--Run Job -->
 
-      <!--Table head-->
-      <thead class="indigo darken-1 lighten-4">
-      <tr class="text-white">
-        <th>#</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <!--Table head-->
+      <br>
 
-      <!--Table body-->
-      <tbody>
-      <tr *ngFor="let post of allPosts">
-        <th *ngIf="post.id >= first && post.id <= last" scope="row">{{post.id}}</th>
-        <td *ngIf="post.id >= first && post.id <= last">{{post.name}}</td>
-        <td *ngIf="post.id >= first && post.id <= last">{{post.title}}</td>
-      </tr>
-      </tbody>
-      <!--Table body-->
-    </table>
-    <!--Table-->
+      <main class="container-fluid">
+        <div class="row my-5">
+          <!--Table -->
+          <table class="table">
+
+            <!--Table head-->
+            <thead class="indigo darken-1 lighten-4">
+            <tr class="text-white">
+              <th>#</th>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <!--Table head-->
+
+            <!--Table body-->
+            <tbody>
+            <tr *ngFor="let post of allPosts">
+              <th *ngIf="post.id >= first && post.id <= last" scope="row">{{post.id}}</th>
+              <td *ngIf="post.id >= first && post.id <= last">{{post.name}}</td>
+              <td *ngIf="post.id >= first && post.id <= last">{{post.title}}</td>
+            </tr>
+            </tbody>
+            <!--Table body-->
+          </table>
+          <!--Table-->
+        </div>
+
+        <!--Pagination -->
+        <nav class="my-4">
+          <ul class="d-flex justify-content-center pagination pagination-circle pg-blue mb-0">
+            <!--First-->
+            <li class="page-item">
+              <a class="page-link" mdbWavesEffect (click)="firstPage()">First</a>
+            </li>
+            <!--Numbers-->
+            <li #pages *ngFor="let page of pageCount" class="page-item">
+              <a class="page-link" mdbWavesEffect>{{page}}</a>
+            </li>
+            <!--Last-->
+            <li class="page-item">
+              <a class="page-link" mdbWavesEffect (click)="lastPage()">Last</a>
+            </li>
+          </ul>
+        </nav>
+        <!--/Pagination -->
+      </main>
+
+    </div>
   </div>
-
-  <!--Pagination -->
-  <nav class="my-4">
-    <ul class="d-flex justify-content-center pagination pagination-circle pg-blue mb-0">
-      <!--First-->
-      <li class="page-item">
-        <a class="page-link" mdbWavesEffect (click)="firstPage()">First</a>
-      </li>
-      <!--Numbers-->
-      <li #pages *ngFor="let page of pageCount" class="page-item">
-        <a class="page-link" mdbWavesEffect>{{page}}</a>
-      </li>
-      <!--Last-->
-      <li class="page-item">
-        <a class="page-link" mdbWavesEffect (click)="lastPage()">Last</a>
-      </li>
-    </ul>
-  </nav>
-  <!--/Pagination -->
-</main>
+</div>
 
