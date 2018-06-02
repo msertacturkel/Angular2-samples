@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, Renderer2, ViewChildren} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-cockpit',
@@ -7,6 +8,9 @@ import {AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, R
 })
 export class CockpitComponent implements AfterViewInit {
   @ViewChildren('pages') pages: QueryList<ElementRef>;
+
+
+
   allPosts = [
     {id: 1, name: 'JOB 1', title: 'Post 1'},
     {id: 2, name: 'JOB 2', title: 'Post 2'},

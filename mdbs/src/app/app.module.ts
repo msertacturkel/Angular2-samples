@@ -7,18 +7,22 @@ import {AppComponent} from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule, routingComponents} from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
+import { ImportjobComponent } from './cockpit/importjob/importjob.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     routingComponents,
-    FooterComponent
+    FooterComponent,
+    ImportjobComponent
   ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, ReactiveFormsModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],
