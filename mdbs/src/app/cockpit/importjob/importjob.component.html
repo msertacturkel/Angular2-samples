@@ -16,7 +16,7 @@
 
   <div class="md-form" *ngIf=" !typeRun ">
     <i class="grey-text"></i>
-    <input type="text" id="dbpassword" formControlName="c" class="form-control" mdbInputDirective>
+    <input type="text" id="dbpassword" formControlName="c" class="form-control" mdbInputDirective >
     <label for="dbpassword">Password</label>
   </div>
 
@@ -30,6 +30,11 @@
     <i class="grey-text"></i>
     <input type="text" id="cron" formControlName="c" class="form-control" mdbInputDirective>
     <label for="cron" >Cron</label>
+  </div>
+
+  <div class="modal-footer justify-content-center">
+    <a type="button" class="btn btn-outline-secondary" data-dismiss="modal" (click)="log()"
+       mdbWavesEffect>Run</a>
   </div>
   {{ typeImport }}
   {{ typeUpdate }}
