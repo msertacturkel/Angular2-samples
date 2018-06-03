@@ -2,24 +2,35 @@
 <form [formGroup]="importJob">
   <p class="h5 text-center mb-4"></p>
 
-  <div class="md-form">
+  <div class="md-form" *ngIf=" !typeRun " >
     <i class="grey-text"></i>
-    <input type="text" id="contactFormName" formControlName="contactFormName" class="form-control" mdbInputDirective>
-    <label for="contactFormName">Your name</label>
+    <input type="text" id="jobName" formControlName="a" class="form-control" mdbInputDirective>
+    <label for="jobName">Job Name</label>
   </div>
 
-  <div class="md-form">
+  <div class="md-form" *ngIf=" !typeRun ">
     <i class="grey-text"></i>
-    <input type="email" id="contactFormEmail" formControlName="contactFormEmail" class="form-control" mdbInputDirective>
-    <label for="contactFormEmail">Your email</label>
+    <input type="text" id="dbusername" formControlName="b" class="form-control" mdbInputDirective>
+    <label for="dbusername">Username</label>
   </div>
 
-  <div class="md-form">
+  <div class="md-form" *ngIf=" !typeRun ">
     <i class="grey-text"></i>
-    <input type="text" id="contactFormSubject" formControlName="contactFormSubject" class="form-control" mdbInputDirective>
-    <label for="contactFormSubject">Subject</label>
+    <input type="text" id="dbpassword" formControlName="c" class="form-control" mdbInputDirective>
+    <label for="dbpassword">Password</label>
   </div>
 
+  <div class="md-form" *ngIf=" !typeRun ">
+    <i class="grey-text"></i>
+    <input type="text" id="constr" formControlName="c" class="form-control" mdbInputDirective>
+    <label for="constr">ConStr</label>
+  </div>
+
+  <div  class="md-form" *ngIf=" typeRun || !typeImport || !typeUpdate" >
+    <i class="grey-text"></i>
+    <input type="text" id="cron" formControlName="c" class="form-control" mdbInputDirective>
+    <label for="cron" >Cron</label>
+  </div>
   {{ typeImport }}
   {{ typeUpdate }}
   {{ typeRun }}

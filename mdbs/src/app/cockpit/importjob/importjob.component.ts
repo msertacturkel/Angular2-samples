@@ -11,13 +11,11 @@ export class ImportjobComponent {
   @Input() typeImport: string;
   @Input() typeUpdate: string;
   @Input() typeRun: string;
-
   constructor(private fb: FormBuilder) {
     this.importJob = fb.group({
-      contactFormName: ['', Validators.required],
-      contactFormEmail: ['', [Validators.required, Validators.email]],
-      contactFormSubject: ['', Validators.required],
-      contactFormMessage: ['', Validators.required]
+      a: ['', Validators.required],
+      b: ['', [Validators.required, Validators.email]],
+      c: ['', Validators.required]
     });
   }
 }
