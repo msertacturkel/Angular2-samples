@@ -15,14 +15,24 @@ export class ImportjobComponent {
   private importJobModel: ImportjobModel;
   constructor(private fb: FormBuilder) {
     this.importJob = fb.group({
-      a: ['', Validators.required],
-      b: ['', [Validators.required, Validators.email]],
-      c: ['', Validators.required]
+      jobNameCtl: ['', Validators.required],
+      usernameCtl: ['', Validators.required],
+      passwordCtl: ['', Validators.required],
+      conStrCtl: ['', Validators.required],
+      cronCtl: ['', Validators.required]
     });
   }
   log() {
-    this.importJobModel = new ImportjobModel(this.importJob.get('a').value,
-      this.importJob.get('b').value, this.importJob.get('c').value, '', '');
-    console.log(this.importJobModel.jobName);
+    this.importJobModel = new ImportjobModel(
+      this.importJob.get('jobNameCtl').value,
+      this.importJob.get('usernameCtl').value,
+      this.importJob.get('passwordCtl').value,
+      this.importJob.get('conStrCtl').value,
+      this.importJob.get('cronCtl').value);
+    console.log('JobName: ' + this.importJobModel.jobName + '\n' ,
+      'Username: ' + this.importJobModel.username + '\n' ,
+      'Password: ' + this.importJobModel.password + '\n',
+      'ConStr: ' + this.importJobModel.conStr + '\n',
+      'Cron: ' + this.importJobModel.cron );
   }
 }
