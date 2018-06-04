@@ -9,6 +9,7 @@ import { AppRoutingModule, routingComponents} from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
 import { ImportjobComponent } from './cockpit/importjob/importjob.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     HeaderComponent,
     routingComponents,
     FooterComponent,
-    ImportjobComponent
+    ImportjobComponent,
   ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     AppRoutingModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],

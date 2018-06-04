@@ -1,5 +1,15 @@
-import {AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, Renderer2, ViewChildren} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  OnInit,
+  Output,
+  QueryList,
+  Renderer2,
+  ViewChildren
+} from '@angular/core';
 
 @Component({
   selector: 'app-cockpit',
@@ -9,7 +19,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class CockpitComponent implements AfterViewInit {
   @ViewChildren('pages') pages: QueryList<ElementRef>;
 
-
+  @Output() valueChange = new EventEmitter();
 
   allPosts = [
     {id: 1, name: 'JOB 1', title: 'Post 1'},
@@ -84,5 +94,4 @@ export class CockpitComponent implements AfterViewInit {
     this.first = +this.activePage * 4 - 4 + 1;
     this.last = +this.activePage * 4;
   }
-
 }
