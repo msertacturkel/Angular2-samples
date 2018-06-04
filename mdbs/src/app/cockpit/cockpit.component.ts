@@ -7,9 +7,10 @@ import {
   OnInit,
   Output,
   QueryList,
-  Renderer2,
+  Renderer2, ViewChild,
   ViewChildren
 } from '@angular/core';
+import {ImportjobComponent} from './importjob/importjob.component';
 
 @Component({
   selector: 'app-cockpit',
@@ -18,9 +19,9 @@ import {
 })
 export class CockpitComponent implements AfterViewInit {
   @ViewChildren('pages') pages: QueryList<ElementRef>;
-
-  @Output() valueChange = new EventEmitter();
-
+  @ViewChild(ImportjobComponent)
+  private importjobComponent: ImportjobComponent;
+  buttonClicked: boolean;
   allPosts = [
     {id: 1, name: 'JOB 1', title: 'Post 1'},
     {id: 2, name: 'JOB 2', title: 'Post 2'},
@@ -56,6 +57,7 @@ export class CockpitComponent implements AfterViewInit {
   }
 
   constructor(private renderer: Renderer2, private el: ElementRef) {
+    this.buttonClicked = false ;
   }
 
   ngAfterViewInit() {
@@ -93,5 +95,10 @@ export class CockpitComponent implements AfterViewInit {
 
     this.first = +this.activePage * 4 - 4 + 1;
     this.last = +this.activePage * 4;
+  }
+  clicked() {
+    this.importjobComponent.log();
+    this.buttonClicked = true;
+    console.log(this.buttonClicked);
   }
 }

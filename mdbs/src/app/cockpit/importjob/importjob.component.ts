@@ -16,6 +16,7 @@ export class ImportjobComponent {
   @Input() typeUpdate: string;
   @Input() typeRun: string;
   private importJobModel: Importjob;
+
   constructor(private importJobservice: ImportjobService, private fb: FormBuilder) {
     this.importJob = fb.group({
       jobNameCtl: ['', Validators.required],
