@@ -1,4 +1,4 @@
-export class Importjob {
+export class ConnectionModel {
   public jobName: string;
   public username: string;
   public password: string;

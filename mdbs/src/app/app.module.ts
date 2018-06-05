@@ -7,7 +7,7 @@ import {AppComponent} from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule, routingComponents} from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
-import { ImportjobComponent } from './cockpit/importjob/importjob.component';
+import { ConnectionComponent } from './cockpit/connection/connection.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
@@ -18,7 +18,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     HeaderComponent,
     routingComponents,
     FooterComponent,
-    ImportjobComponent,
+    ConnectionComponent,
   ],
   imports: [
     BrowserModule,
