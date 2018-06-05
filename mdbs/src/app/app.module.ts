@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ImportjobComponent } from './cockpit/importjob/importjob.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxDatatableModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],
