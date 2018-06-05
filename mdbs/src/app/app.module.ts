@@ -11,6 +11,7 @@ import { ConnectionComponent } from './cockpit/connection/connection.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { DatatableComponent } from './cockpit/datatable/datatable.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     routingComponents,
     FooterComponent,
     ConnectionComponent,
+    DatatableComponent,
   ],
   imports: [
     BrowserModule,
